@@ -173,3 +173,406 @@ h1 span {
   font-size: 15px;
   line-height: 1.7;
 }
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  padding: 25px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 3px 12px #263d2903;
+}
+
+.entry h2 {
+  margin-bottom: 23px;
+  font-size: 17px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.secondary {
+  color: var(--green);
+  background: #f3f6ef;
+  border-color: #dce5d7;
+}
+
+.secondary:hover:not(:disabled) {
+  background: #e7efdf;
+}
+
+.welcome {
+  text-align: center;
+  border: 1px dashed #ccd6c4;
+  border-radius: 15px;
+  padding: 42px 20px;
+  margin-top: 28px;
+}
+
+.welcome-symbol {
+  color: #80956d;
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.welcome h2 {
+  font-size: 18px;
+}
+
+.welcome p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.alert {
+  background: #fff0e9;
+  color: #893f28;
+  border: 1px solid #edcbbd;
+  padding: 17px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 22px;
+}
+
+.text-button {
+  color: #893f28;
+  padding: 0 4px;
+  border: none;
+  background: none;
+  text-decoration: underline;
+}
+
+.text-button:hover:not(:disabled) {
+  background: none;
+}
+
+.notice {
+  padding: 15px 20px;
+  color: #316341;
+  background: #e8f0df;
+  border-radius: 10px;
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.loading {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.workspace {
+  margin-top: 43px;
+}
+
+.home-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.home-heading h2 {
+  font-size: 30px;
+  margin: 7px 0 9px;
+  overflow-wrap: anywhere;
+}
+
+.home-id {
+  color: var(--muted);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.home-id code {
+  user-select: all;
+  font-size: 11px;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.count {
+  min-width: 24px;
+  height: 24px;
+  padding: 3px 7px;
+  text-align: center;
+  border-radius: 7px;
+  background: #f0f3eb;
+  color: #6d805c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.muted {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.section-heading + .muted {
+  margin-top: 9px;
+}
+
+.empty-small {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  padding: 23px 0;
+}
+
+.balances, .shares {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+
+.balances li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0e9;
+  font-size: 13px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  color: #72825f;
+  background: #eef2e6;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.member-name {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.balances strong {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.balance-total {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+.balance-total strong {
+  font-size: 15px;
+}
+
+.stack-form {
+  border-top: 1px solid var(--border);
+  padding-top: 21px;
+}
+
+.stack-form button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.footnote {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--muted);
+  padding: 15px 10px;
+}
+
+.bill-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px auto;
+  align-items: end;
+  gap: 12px;
+  margin: 22px 0 13px;
+}
+
+.bills-heading {
+  margin: 29px 2px 16px;
+  justify-content: flex-start;
+}
+
+.empty-bills {
+  text-align: center;
+  padding: 38px 20px;
+}
+
+.empty-bills p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.bill {
+  margin-bottom: 15px;
+}
+
+.bill-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 18px;
+}
+
+.bill-heading h3 {
+  overflow-wrap: anywhere;
+}
+
+.bill-heading .muted {
+  margin-top: 7px;
+}
+
+.bill-total {
+  font-size: 19px;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+
+.shares li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #edf0e9;
+  padding: 13px 0;
+}
+
+.shares li:last-child {
+  padding-bottom: 0;
+}
+
+.share-person {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.share-person strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.pay-button {
+  color: var(--green);
+  border-color: #d7e2cd;
+  background: #f1f5ea;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.pay-button:hover:not(:disabled) {
+  color: white;
+}
+
+.paid {
+  color: #52764a;
+  font-size: 12px;
+  background: #eef4e8;
+  border-radius: 6px;
+  padding: 7px 13px;
+}
+
+footer {
+  padding: 36px 0;
+  text-align: center;
+  color: #889180;
+  font-size: 11px;
+}
+
+@media (max-width: 1000px) {
+  .workspace-grid {
+    grid-template-columns: 285px minmax(0, 1fr);
+    gap: 18px;
+  }
+  .panel {
+    padding: 20px;
+  }
+  .bill-form {
+    grid-template-columns: minmax(0, 1fr) 130px;
+  }
+  .bill-form button {
+    grid-column: 1 / -1;
+  }
+  .input-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 0 20px;
+  }
+  .masthead {
+    min-height: 80px;
+  }
+  .tag {
+    display: none;
+  }
+  .intro {
+    padding-top: 38px;
+  }
+  h1 {
+    letter-spacing: -1.7px;
+  }
+  .entry-grid,
+  .workspace-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .input-row {
+    flex-direction: row;
+  }
+  .home-heading h2 {
+    font-size: 25px;
+  }
+  .home-heading {
+    align-items: start;
+  }
+  .workspace {
+    margin-top: 30px;
+  }
+  .bill-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .bill-form button {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
