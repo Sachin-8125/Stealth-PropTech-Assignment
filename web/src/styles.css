@@ -1,0 +1,175 @@
+:root {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #203f36;
+  background: #f6f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --green: #225c48;
+  --muted: #6e7c73;
+  --border: #e0e6dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button, input, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 3px solid #9abf86;
+  outline-offset: 3px;
+}
+
+button {
+  border: 1px solid var(--green);
+  background: var(--green);
+  color: white;
+  border-radius: 9px;
+  padding: 12px 17px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 150ms;
+}
+
+button:hover:not(:disabled) {
+  background: #174333;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #d8dfd4;
+  border-radius: 9px;
+  color: #203f36;
+  background: #fff;
+  padding: 12px 13px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #528065;
+  box-shadow: 0 0 0 3px #dfead8;
+}
+
+input::placeholder {
+  color: #919b94;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Manrope", system-ui, sans-serif;
+}
+
+h2 {
+  font-size: 21px;
+  letter-spacing: -0.6px;
+}
+
+h3 {
+  font-size: 16px;
+  letter-spacing: -0.3px;
+}
+
+.app {
+  max-width: 1192px;
+  padding: 0 36px;
+  margin: 0 auto;
+}
+
+.masthead {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #234d3b;
+  text-decoration: none;
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 37px;
+    height: 38px;
+    background: #225c48;
+    color: #ebf0df;
+    border-radius: 11px;
+    font-size: 28px;
+}
+
+.tag {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.intro {
+    padding: 61px 0 38px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.9px;
+    color: #66805a;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: -2.6px;
+  font-weight: 800;
+  line-height: 1.14;
+  margin: 17px 0 19px;
+}
+
+h1 span {
+  color: #7b8b68;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
