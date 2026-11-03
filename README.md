@@ -146,6 +146,12 @@ pnpm --filter bill-splitter-api cf-typegen
 You can use AI tools. Tell us which ones and where in your answers on the form.
 You must understand every line you submit. We check this with your video and in a live call. "The AI wrote it" is not an answer.
 
+## Decisions
+
+1. **Represent money as integer cents.** This avoids floating-point rounding errors and makes validation and bill splitting deterministic.
+2. **Enforce data integrity in SQLite.** Foreign keys, unique constraints, checks, and sequence columns keep related records valid and preserve member and bill ordering even when requests are concurrent.
+3. **Use a single web snapshot with persistent payment keys.** The page loads the home, bills, and balances together, while storing an idempotency key per share makes retries safe after timeouts or failed requests.
+
 ## How to submit
 
 1. Click **Use this template**, then **Create a new repository**. Make the repository **public**.
