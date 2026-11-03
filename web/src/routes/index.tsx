@@ -1,11 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
-import "../styles.css";
-import { useState, useRef, useEffect,  type SubmitEvent } from "react";
-import { getSnapshot, pathId, paymentKey, request, type Snapshot } from '../api.ts';
+import { createFileRoute } from '@tanstack/react-router'
+import '../styles.css'
+import { type SubmitEvent, useEffect, useRef, useState } from 'react'
+import { getSnapshot, pathId, paymentKey, request, type Snapshot } from '../api.ts'
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute('/')({
   component: Home,
-});
+})
 
 const cents = (amount: number) => `${amount.toLocaleString('en-US')}¢`
 const message = (error: unknown) =>
@@ -28,18 +28,18 @@ function Home() {
   const [amount, setAmount] = useState('')
 
   useEffect(() => {
-    scope.current = { controller: new AbortController(), busy: false };
-    return () => scope.current.controller.abort();
-  }, []);
+    scope.current = { controller: new AbortController(), busy: false }
+    return () => scope.current.controller.abort()
+  }, [])
 
   const isCurrent = (current: Scope) =>
-    scope.current === current && !current.controller.signal.aborted;
+    scope.current === current && !current.controller.signal.aborted
 
   const disabled = Boolean(busy) || loading
 
   const totalOutstanding =
     data?.balances.reduce((sum, balance) => sum + balance.outstandingCents, 0) ?? 0
-  
+
   async function refresh(id: string, current: Scope) {
     setLoading(true)
     try {
@@ -152,7 +152,6 @@ function Home() {
 
   return (
     <main className="app">
-
       {/* header section */}
       <header className="masthead">
         <a className="brand" href="/" aria-label="Household bill splitter home">
@@ -169,9 +168,7 @@ function Home() {
           <br />
           <span>Live together easily.</span>
         </h1>
-        <p>
-          One place for your home's bills, everyone's shares, and what you owe.
-        </p>
+        <p>One place for your home's bills, everyone's shares, and what you owe.</p>
       </section>
 
       {/* entry section */}
@@ -424,5 +421,5 @@ function Home() {
 
       <footer>Made for the home you share. All amounts shown in whole cents.</footer>
     </main>
-  );
+  )
 }
